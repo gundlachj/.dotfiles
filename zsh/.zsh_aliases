@@ -1,3 +1,5 @@
 alias ll="eza -la --git"
 
+alias cd="z"
+
 alias vi="nvim"
