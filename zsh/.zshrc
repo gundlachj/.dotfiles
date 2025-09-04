@@ -4,3 +4,5 @@ export PS1="%{$fg[green]%}[%{$fg[blue]%}%n%{$fg[red]%}@%{$fg[magenta]%}%1~%{$fg[
 if [ -f ~/.zsh_aliases ]; then
   source ~/.zsh_aliases
 fi
+
+export EDITOR="/usr/bin/nvim"
