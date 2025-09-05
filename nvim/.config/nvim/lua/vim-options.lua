@@ -1,11 +1,22 @@
+-- Add spaces instead of tab character
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+
+-- Set number of spaces in a tab
+-- For C:
+--vim.cmd("set tabstop=2")
+--vim.cmd("set softtabstop=2")
+--vim.cmd("set shiftwidth=2")
+--For Java:
+vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=4")
+vim.cmd("set shiftwidth=4")
 
 vim.cmd("set scrolloff=8")
+
+-- Set leader key
 vim.g.mapleader = " "
 
+-- Remove the use of a swap file
 vim.opt.swapfile = false
 
 -- Navigate vim panes better
@@ -80,9 +91,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- semicolons
 vim.keymap.set("n", ";", "$a;<ESC>")
-
--- open the cwd
-vim.keymap.set("n", "-", "<CMD>e .<CR>")
 
 -- diagnostic text displayed directly in editor
 vim.diagnostic.config({virtual_text = true})
