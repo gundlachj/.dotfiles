@@ -94,3 +94,20 @@ vim.keymap.set("n", ";", "$a;<ESC>")
 
 -- diagnostic text displayed directly in editor
 vim.diagnostic.config({virtual_text = true})
+
+-- Change keymaps for commenting
+vim.keymap.set("n", "<leader>rc", "gc")
+
+-- Configure fzf to run
+vim.opt.runtimepath:append("/opt/homebrew/opt/fzf")
+
+-- Netrw Directory Listing
+vim.keymap.set("n", "-", ":Explore<CR>")
+vim.g.netrw_list_style = 3
+
+-- Setting up diagnostic keymaps
+vim.keymap.set({ "n", "x" }, "<leader>]d", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
+vim.keymap.set({ "n", "x" }, "<leader>[d", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
+
+-- REdo
+vim.keymap.set("n", "U", "<c-r>")
