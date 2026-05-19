@@ -5,4 +5,8 @@ if [ -f ~/.zsh_aliases ]; then
   source ~/.zsh_aliases
 fi
 
+if [ -f ~/.zprofile ]; then
+    source ~/.zprofile
+fi
+
 export EDITOR="/usr/bin/nvim"
